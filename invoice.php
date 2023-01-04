@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <link href="assets/printer/printer.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
@@ -16,40 +16,54 @@
     <div class="ticket">
 
         <center><img src="assets/images/hoteltaj.png" alt="Logo" style="width: 45%; height: 45%;"></center>
- 
-        <h6 class="cust-cla" style="text-align: center;" >STNT NO:S113071-7
-        <h6 class="cust-cla" style="text-align: center;"><b><span id="staffusername">Salman</span></h6>
-        <div class="">
-            <h6 class="cust-cla" style="text-align: center; width: 100%; height: 10%;"><b>Address: </b> AUTOBHAN ROAD,
-                HYDERABAD
-                <b>BILL</b>
-            </h6>
-            <h6 class="cust-cla" style="text-align: center;"><b> Tarrif Heading: </b> 9801.2000
-                <b>COPY</b>
-            </h6>
-            <div style="clear: both">
-                <h6 style="text-align: center;" class="cust-cla"><b>KOT NO:</b></h6>
-                <h6 style="text-align: center;" class="cust-cla"><b>INV No: </b><span id="transactionid">00000</span></h6>
+        <table class="tab">
+            <tbody class="tab">
+                <tr class="tab">
+                    <td class="tab">STNT NO:S113071-7</td>
 
-            </div>
-            <div style="clear: both">
-                <h6 style="text-align: center;" class="cust-cla"><b>Table No: </b>RT-Fatima Hall 1.</h6>
-                <h6 style="text-align: center;" class="cust-cla"><b>Persons: </b><span id="PERSONS">5</span></h6>
+                    <td class="tab">Salman</td>
+                </tr>
+                <tr class="tab">
+                    <td colspan="2" class="tab"> <b>Address: </b> AUTOBHAN ROAD,
+                        HYDERABAD</td>
 
-                <h6 style="text-align: center;" class="cust-cla"><b>Order Type: </b> <span id="ORDERTYPE">Dine In</span></h6>
-                <h6 style="text-align: center;" class="cust-cla"><b>Date: </b><span id="STARTDATE">04/01/2023</span></h6>
-            </div>
-        </div>
-        </p>
+                    <td class="tab"></td>
+                </tr>
+                <tr class="tab">
+                    <td colspan="2" class="tab"> <b> Tarrif Heading: </b> 9801.2000</td>
+            </h6>
+
+                    <td class="tab"><b>COPY</b></td>
+                </tr>
+                <tr class="tab">
+                    <td colspan="2" class="tab"><b>KOT NO:</b>
+
+                    <td class="tab"><b>INV No: </b><span id="transactionid">00000</span></td>
+                </tr>
+
+                <tr class="tab">
+                    <td colspan="2" class="tab"><b>Table No: </b>RT-Fatima Hall 1.</h6></td>
+
+                    <td class="tab"><b>Persons: </b><span id="PERSONS">5</span></td>
+                </tr>
+
+                <tr class="tab">
+                    <td colspan="2" class="tab"><b>Order Type: </b> <span id="ORDERTYPE">Dine In</span></td>
+
+                    <td class="tab"><b>Date: </b><span id="STARTDATE">04/01/2023</span></td>
+                </tr>
+            </tbody>
+        </table>
+
         <table>
             <thead>
-                <tr>
+                <th>
                     <th>Product Name</th>
                     <th>Qty</th>
                     <th>Unit Price</th>
                     <th>Total Price</th>
 
-                </tr>
+                </th>
             </thead>
             <tbody id="tbody">
                 <tr>
@@ -65,33 +79,33 @@
                     <td></td>
                     <td>1430</td>
 
-                    </tr>
-                    <tr>
+                </tr>
+                <tr>
                     <th>SST13%</th>
                     <td></td>
                     <td></td>
                     <td>19661</td>
-                    </tr>
-                    <tr>
+                </tr>
+                <tr>
                     <th>Total Discount</th>
                     <td></td>
                     <td></td>
                     <td>0.00</td>
-                    </tr>
-                    <tr>
+                </tr>
+                <tr>
                     <th>Total</th>
                     <td></td>
                     <td></td>
                     <td>170906</td>
-                    </tr>
-                    <tr>
+                </tr>
+                <tr>
                     <th>CASH</th>
                     <td></td>
                     <td></td>
                     <td>171,000</td>
                 </tr>
                 <tr>
-                <td colspan="4" style="text-align: center;">Change Back</td>
+                    <td colspan="4" style="text-align: center;">Change Back</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -110,14 +124,14 @@
                     <td></td>
                     <td>0.00</td>
                 </tr>
-                
-</tr>
+
+                </tr>
             </tbody>
-        
+
         </table>
-        
-      
-        
+
+
+
         </table>
         <p class="centered">Thank You For Coming
             <br>See You Again
