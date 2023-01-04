@@ -12,7 +12,7 @@
     <title>Receipt example</title>
 </head>
 
-<body>
+<body style="padding: 0px 10px !important;">
     <div class="ticket">
 
         <center><img src="assets/images/hoteltaj.png" alt="Logo" style="width: 45%; height: 45%;"></center>
