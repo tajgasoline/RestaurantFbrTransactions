@@ -3,6 +3,11 @@
     font-family: 'Times New Roman';
 }
 
+.cust-cla{
+padding: 0rem !important;
+margin: 0rem !important;
+}
+
 td,
 th,
 tr,
@@ -39,6 +44,7 @@ th.price {
 .ticket {
     width: 168px;
     max-width: 168px;
+    
 }
 
 img {
