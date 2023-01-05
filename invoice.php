@@ -14,56 +14,60 @@
 
 <body style="padding: 0px 10px !important;">
     <div class="ticket">
-
+        
         <center><img src="assets/images/hoteltaj.png" alt="Logo" style="width: 45%; height: 45%;"></center>
-        <table class="tab">
+        <table class="tab" style="width: 100%;">
             <tbody class="tab">
                 <tr class="tab">
-                    <td class="tab">STNT NO:S113071-7</td>
-
-                    <td class="tab">Salman</td>
+                    <td class="tab" style="width: 30%;"><p class="margin-padding-0">STNT NO:</p></td>
+                    <td class="tab"  style="width: 30%;"><p class="margin-padding-0 bold">S113071-7</p></td>
+                    <td class="tab"  style="width: 20%;"><p class="margin-padding-0 tab-float-right">User:</p></td>
+                    <td class="tab"  style="width: 20%;"><p class="margin-padding-0 tab-float-right bold">Salman</p></td>
                 </tr>
                 <tr class="tab">
-                    <td colspan="2" class="tab"> <b>Address: </b> AUTOBHAN ROAD,
-                        HYDERABAD</td>
+                    <td  class="tab" style="width: 30%;"><p class="margin-padding-0">Address:</p></td>
+                    <td class="tab" colspan="3"><p class="margin-padding-0 bold">AUTOBHAN ROAD,HYD</p></td>
 
-                    <td class="tab"></td>
                 </tr>
                 <tr class="tab">
-                    <td colspan="2" class="tab"> <b> Tarrif Heading: </b> 9801.2000</td>
-            </h6>
+                    <td class="tab" style="width: 30%;" colspan="3"><p class="margin-padding-0">Tarrif Heading:</p></td>
+                    <td class="tab"  style="width: 30%;" colspan="1"><p class="margin-padding-0 bold">9801.2000</p></td>
 
-                    <td class="tab"><b>COPY</b></td>
                 </tr>
                 <tr class="tab">
-                    <td colspan="2" class="tab"><b>KOT NO:</b>
-
-                    <td class="tab"><b>INV No: </b><span id="transactionid">00000</span></td>
-                </tr>
-
-                <tr class="tab">
-                    <td colspan="2" class="tab"><b>Table No: </b>RT-Fatima Hall 1.</h6></td>
-
-                    <td class="tab"><b>Persons: </b><span id="PERSONS">5</span></td>
+                    <td class="tab" style="width: 30%;"><p class="margin-padding-0">KOT NO:</p></td>
+                    <td class="tab"  style="width: 20%;"><p class="margin-padding-0 bold">0000</p></td>
+                    <td class="tab"  style="width: 40%;"><p class="margin-padding-0 tab-float-right">INV No:</p></td>
+                    <td class="tab"  style="width: 20%;"><p class="margin-padding-0 tab-float-right bold">00000</p></td>
                 </tr>
 
                 <tr class="tab">
-                    <td colspan="2" class="tab"><b>Order Type: </b> <span id="ORDERTYPE">Dine In</span></td>
-
-                    <td class="tab"><b>Date: </b><span id="STARTDATE">04/01/2023</span></td>
+                    <td class="tab" style="width: 30%;" ><p class="margin-padding-0">Table No:</p></td>
+                    <td class="tab"  style="width: 30%;" colspan="2"><p class="margin-padding-0 bold">RT-Fatima Hall 1.</p></td>
+                    <td class="tab"  style="width: 20%;"><p class="margin-padding-0 tab-float-right">Persons:</p></td>
+                    <td class="tab"  style="width: 20%;"><p class="margin-padding-0 tab-float-right bold">5</p></td>
+                </tr>
+                <tr class="tab">
+                    <td class="tab" style="width: 40%;"><p class="margin-padding-0">Order Type:</p></td>
+                    <td class="tab"  style="width: 30%;"><p class="margin-padding-0 bold">Dine In</p></td>
+                    <td class="tab"  style="width: 20%;"><p class="margin-padding-0 tab-float-right">Date:</p></td>
+                    <td class="tab"  style="width: 20%;"><p class="margin-padding-0 tab-float-right bold">04/01/2023</p></td>
+                </tr>
+                <tr class="tab">
+                    <td class="tab" style="width: 20%; text-align: center;" colspan="4"><p class="margin-padding-0 bold">COPY</p></td>
                 </tr>
             </tbody>
         </table>
 
         <table>
             <thead>
-                <th>
+                
                     <th>Product Name</th>
                     <th>Qty</th>
                     <th>Unit Price</th>
                     <th>Total Price</th>
 
-                </th>
+                
             </thead>
             <tbody id="tbody">
                 <tr>
@@ -105,7 +109,7 @@
                     <td>171,000</td>
                 </tr>
                 <tr>
-                    <td colspan="4" style="text-align: center;">Change Back</td>
+                    <td colspan="4" style="text-align: center;"><p class="bold">Change Back</p></td>
                     <td></td>
                     <td></td>
                     <td></td>
