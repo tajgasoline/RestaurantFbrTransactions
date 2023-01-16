@@ -13,7 +13,7 @@ if(  isset($_POST['Transaction']))
     $userId = "";
     $userPassword = "";
     $database = "";
- 
+ // $finaltotal = (int)$finaltotal;
 
 	$result = array(); 
 
@@ -49,6 +49,7 @@ else {
 
 }
   
+$totalamount=0;
     $query = "SELECT RTT.store,RTT.TRANSACTIONID,RPT.STARTDATE AS  ORDERDATE ,cast(RPT.STARTDATE as Date)  STARTDATE ,B.ORDERTYPE,EC.NAME AS HNAME,ECPT.NAME AS INAME, (RTST.QTY *-1) QTY,RTST.PRICE,
 RTST.DISCAMOUNT * -1 DISCAMOUNT, RTST.TRANSACTIONSTATUS, 
 RTST.NETAMOUNT * -1 NETAMOUNT,GETDATE(),B.PERSONS,RTST.ITEMID,RTST.LINENUM,REFERENCENAME as CustomerNAme  , CONTACTNUMBER as CustomerContact ,ADDRESS as CustomerAddress 
@@ -82,6 +83,7 @@ AND (ECPT.LANGUAGEID ='en-us') ".$where." ";
       while ($res = sqlsrv_fetch_array($stmt))
       {  
  
+   $totalamount = $totalamount + $res['NETAMOUNT'];
       	$dbcustomername= $res['CustomerNAme'];
         $PERSONS= $res['PERSONS'];
         $ORDERTYPE= $res['ORDERTYPE'];
@@ -117,6 +119,7 @@ AND (ECPT.LANGUAGEID ='en-us') ".$where." ";
     "staffusername" => $_SESSION['staffusername'], 
     "tax" => $tax,
     "dbfield1" => $dbfield1,
+    "totalamount" => $totalamount,
     "data"    => $mysql_data
   );
 // Convert PHP array to JSON array

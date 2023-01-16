@@ -70,14 +70,23 @@
                 
             </thead>
             <tbody id="tbody">
-                <tr>
+              
+
+                
+            </tbody>
+
+        </table>
+
+        <table style="width:100%">
+            <tbody>
+             <!--      <tr>
                     <th>Family Festival-3 01</th>
                     <td>1</td>
                     <td>2,090.00</td>
                     <td>2,090.00</td>
 
-                </tr>
-                <tr>
+                </tr> -->
+          <!--       <tr>
                     <th>Subtotal</th>
                     <td></td>
                     <td></td>
@@ -85,7 +94,7 @@
 
                 </tr>
                 <tr>
-                    <th>SST13%</th>
+                    <th>GST13%</th>
                     <td></td>
                     <td></td>
                     <td>19661</td>
@@ -95,43 +104,35 @@
                     <td></td>
                     <td></td>
                     <td>0.00</td>
-                </tr>
-                <tr>
+                </tr> -->
+              <!--   <tr>
                     <th>Total</th>
                     <td></td>
                     <td></td>
                     <td>170906</td>
-                </tr>
-                <tr>
+                </tr> -->
+            <!--     <tr>
                     <th>CASH</th>
                     <td></td>
                     <td></td>
                     <td>171,000</td>
-                </tr>
-                <tr>
+                </tr> -->
+           <!--      <tr>
                     <td colspan="4" style="text-align: center;"><p class="bold">Change Back</p></td>
                     <td></td>
                     <td></td>
                     <td></td>
 
                 </tr>
-                <tr>
-                    <th>CASH</th>
-                    <td></td>
-                    <td></td>
-                    <td>93.00</td>
-
-                </tr>
+             
                 <tr>
                     <th></th>
                     <td></td>
                     <td></td>
                     <td>0.00</td>
-                </tr>
+                </tr> -->
 
-                </tr>
             </tbody>
-
         </table>
 
 

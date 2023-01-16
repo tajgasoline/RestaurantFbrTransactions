@@ -175,7 +175,8 @@
           <button class="btn btn-primary  btn-block waves-effect waves-light" style="width:100%;" onclick="Search2(this.value);" id="paycashwithprint" type="button" value="paycashwithprint">Pay Cash with Print </button>
   </div>
   <div class="col-md-2">
-          <button class="btn btn-primary  btn-block waves-effect waves-light" style="width:100%;" onclick="Search2(this.value);" id="paycashwithoutprint" type="button" value="paycashwithoutprint">Pay Cash without Print </button>
+          <button class="btn btn-primary  btn-block waves-effect waves-light" style="
+          border:1px solid green !important; background-color:green !important ; width:100%;" onclick="Search2(this.value);" id="paycashwithoutprint" type="button" value="paycashwithoutprint">Go Green </button>
   </div>
   <div class="col-md-2">
           <button class="btn btn-primary  btn-block waves-effect waves-light" style="width:100%;" onclick="Search2(this.value);" id="paywithcard" type="button" value="paywithcard">Pay with Card </button>

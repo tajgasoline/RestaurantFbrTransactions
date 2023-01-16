@@ -10,7 +10,7 @@ if (!isset($_SESSION['role'])) {
 <div class="left-sidenav">
   <ul class="metismenu left-sidenav-menu">
     <?php
-    if($role == 'Manager' || $role == 'Order Taker' || $role == 'Cashier'){
+    if($role == 'Manager' || $role == 'Order Taker' ){
         echo '<li id="FBRtransactions"><a href="FBRtransactions.php"><i class="ti-bar-chart"></i><span>Bill View Page</span></i></span></a></li>'; 
     }
 
