@@ -29,12 +29,12 @@ $store=  $_SESSION['store'] ;
 $store=  $_SESSION['store'] ;
 
  
-    
+    $id= rand(10,100);
       // for New insertion
             $query = "insert into tblfbrtransactions(id,store,dbname,username,password,server,staffusername
-            ,staffpass,tax,role,address) values (1,?,?,?,?,?,?,?,?,?,?) ";
+            ,staffpass,tax,role,address) values (?,?,?,?,?,?,?,?,?,?,?) ";
 
-            $params = array(&$store,&$dbname,&$dbusername,&$dbpassword,&$server,&$staffusername,&$staffpass,
+            $params = array(&$id,&$store,&$dbname,&$dbusername,&$dbpassword,&$server,&$staffusername,&$staffpass,
               &$tax,&$Role,&$address);
             $stmt = sqlsrv_prepare($MainConnect, $query, $params);
  

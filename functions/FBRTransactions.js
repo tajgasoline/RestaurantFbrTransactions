@@ -34,8 +34,7 @@ function Fbrtrans(){
     dataType: "JSON",
     success: function (data) 
     {
-      var result = data.result;
-      alert(result);
+      var result = data.result; 
       location.reload();
 
     }});
@@ -86,7 +85,7 @@ function Search(){
 
       }
    finaltotal2 = data.totalamount; 
-   alert(finaltotal2);
+   // alert(finaltotal2);
 finaltotal2 = (parseInt(finaltotal2)).toFixed(2);
        $("#totalbill").text(finaltotal2);
        $("#tablenumber").text(4);
