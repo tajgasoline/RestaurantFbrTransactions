@@ -1,0 +1,6 @@
+test account:
+username: salman
+pass: agha
+role : manager
+
+up to date branch is dev branch

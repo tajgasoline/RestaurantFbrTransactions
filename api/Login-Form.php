@@ -17,8 +17,8 @@ if(isset($_POST['username']) &&  isset($_POST['pass']) )
 	$result = array(); 
 
 	include('../MainConnect.php');  
-	$query = "select staffusername,staffpass,store,dbname,username,password,server,tax ,role,address
-	from tblfbrtransactions where staffusername = '".$username."'";
+	$query = "select staffusername,staffpass,store,dbname,username,password,server,tax ,role,
+	address,POSID,ntn,POS_username,POS_pass,Live,Logo,Tarrif	from tblfbrtransactions where staffusername = '".$username."'";
 	$stmt = sqlsrv_query($MainConnect, $query, array(), array("Scrollable" => 'static')) or die(sqlsrv_errors());
 	while ($row = sqlsrv_fetch_array($stmt))
 	{
@@ -32,6 +32,14 @@ if(isset($_POST['username']) &&  isset($_POST['pass']) )
 		$tax = $row["tax"];
 		$role = $row["role"]; 
 		$address = $row["address"]; 
+
+			$POSID = $row["POSID"]; 
+		$ntn = $row["ntn"];
+		$POS_username = $row["POS_username"]; 
+		$POS_pass = $row["POS_pass"]; 
+		$Live = $row["Live"]; 
+		$Logo = $row["Logo"]; 
+		$Tarrif = $row["Tarrif"]; 
 		
 	} 
 
@@ -59,8 +67,16 @@ if(isset($_POST['username']) &&  isset($_POST['pass']) )
 		$_SESSION['tax'] = $tax; 
 		$_SESSION['role'] = $role; 
 		$_SESSION['address'] = $address; 
-		
 
+		$_SESSION['POSID'] = $POSID; 
+		$_SESSION['ntn'] = $ntn; 
+		$_SESSION['POS_username'] = $POS_username; 
+		$_SESSION['POS_pass'] = $POS_pass;
+		$_SESSION['Live'] = $Live; 
+		$_SESSION['Logo'] = $Logo; 
+		$_SESSION['Tarrif'] = $Tarrif; 
+ 
+		
 
  
 		$store = $store;

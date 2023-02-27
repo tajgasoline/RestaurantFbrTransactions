@@ -91,7 +91,7 @@
            </tr>
            <tr>
             <td></td>
-            <td>      <button class="btn btn-primary  btn-block waves-effect waves-light" style="width:50%;" onclick="Search();" id="btnlogin" type="button">Search<i class="fas fa-sign-in-alt ml-1"></i></button></td>
+            <td>      <button class="btn btn-primary  btn-block waves-effect waves-light" style="width:50%;" onclick="Search();" id="btnSearch1" type="button">Search</button></td>
           </tr>
         </table>
       </div>
@@ -207,6 +207,15 @@
 <script src="assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
 <script src="assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
 <script src="assets/pages/jquery.forms-advanced.js"></script>
+
+ 
+          <script src="assets/plugins/dropify/js/dropify.min.js"></script>
+        <script src="assets/pages/jquery.profile.init.js"></script>
+        <script src="assets/plugins/filter/isotope.pkgd.min.js"></script>
+        <script src="assets/plugins/filter/masonry.pkgd.min.js"></script>
+        <script src="assets/plugins/filter/jquery.magnific-popup.min.js"></script>
+        <script src="assets/pages/jquery.gallery.inity.js"></script>
+
 <!-- App js -->
 <script src="assets/js/app.js"></script>
 </body>

@@ -6,6 +6,7 @@ if(  isset($_POST['field1']))
     session_start();
 
   $store =   $_SESSION['store'];
+    $staffusername =   $_SESSION['staffusername'];
   $tax =  $_SESSION['tax'];
   $field1 = htmlentities($_POST["field1"]); 
   $serverName = "";
@@ -26,7 +27,9 @@ if(  isset($_POST['field1']))
                      } 
 
   include('../MainConnect.php'); 
-                      $query = "select dbname,username,password,server from tblfbrtransactions where store = '".$store."'";
+
+                      $query = "select dbname,username,password,server from tblfbrtransactions where store = '".$store."' and staffusername='".$staffusername."'";
+  
                       $stmt = sqlsrv_query($MainConnect, $query, array(), array("Scrollable" => 'static')) or die(sqlsrv_errors());
                       while ($row = sqlsrv_fetch_array($stmt))
                       {
@@ -62,25 +65,12 @@ else {
  
 
 
-
-//     $query = " select RTT.CUSTACCOUNT
-//  ,DIRPARTYTABLE.name as CustomerNAme 
-//  , RTST.itemid,ECORESPRODUCTTRANSLATION.NAME as ItemNAme,RTST.price, abs(RTST.QTY) as QTY, abs(RTST.NETAMOUNT) as NETAMOUNT
-// ,( select abs(sum(RL.NETAMOUNT))
-//  from  RETAILTRANSACTIONSALESTRANS RL  
-//  where RL.transactionid=RTT.transactionid) as nettotal
-//  from  RETAILTRANSACTIONSALESTRANS RTST 
-//  inner join RETAILTRANSACTIONTABLE RTT on RTT.TRANSACTIONID= RTST.TRANSACTIONID  
-//  inner join CUSTTABLE on custtable.accountnum = Rtt.CustAccount
-//  inner join DIRPARTYTABLE on Custtable.PARTY = DIRPARTYTABLE.RECID
-//  inner join Inventtable on INventtable.itemid = RTST.ITEMID
-//  inner join ECORESPRODUCTTRANSLATION on Inventtable.PRODUCT = ECORESPRODUCTTRANSLATION.PRODUCT
-//   ".$where." ";
-
+ 
 $totalamount=0;
-    $query = "SELECT RTT.store,RTT.TRANSACTIONID,RPT.STARTDATE AS  ORDERDATE ,cast(RPT.STARTDATE as Date)  STARTDATE ,B.ORDERTYPE,EC.NAME AS HNAME,ECPT.NAME AS INAME, (RTST.QTY *-1) QTY,RTST.PRICE,
+    $query = "SELECT RTT.store,RTT.TRANSACTIONID,RPT.STARTDATE AS  ORDERDATE ,cast(RPT.STARTDATE as Date)  STARTDATE ,B.ORDERTYPE,EC.NAME AS HNAME,ECPT.NAME AS INAME, (RTST.QTY *-1) QTY,
+    ROUND(((RTST.PRICE / 1".$tax.")*100),2) AS PRICE,
 RTST.DISCAMOUNT * -1 DISCAMOUNT, RTST.TRANSACTIONSTATUS, 
-RTST.NETAMOUNT * -1 NETAMOUNT,GETDATE(),B.PERSONS,RTST.ITEMID,RTST.LINENUM,REFERENCENAME as CustomerNAme  , CONTACTNUMBER as CustomerContact ,ADDRESS as CustomerAddress 
+ROUND(((RTST.PRICE / 1".$tax.")*100),2) * (RTST.QTY *-1) AS NETAMOUNT,GETDATE(),B.PERSONS,RTST.ITEMID,RTST.LINENUM,REFERENCENAME as CustomerNAme  , CONTACTNUMBER as CustomerContact ,ADDRESS as CustomerAddress 
 FROM RETAILTRANSACTIONTABLE RTT
 INNER JOIN RETAILTRANSACTIONSALESTRANS RTST ON RTST.TRANSACTIONID = RTT.TRANSACTIONID
 AND RTT.DATAAREAID   =RTST.DATAAREAID
@@ -120,10 +110,10 @@ AND (ECPT.LANGUAGEID ='en-us') ".$where." ";
         $mysql_data[] = array
         (
           "itemid" => $res['INAME'],
-          "price" => number_format(round($res['PRICE'])),
+          "price" => round($res['PRICE'],2),
           "QTY" => round($res['QTY']), 
-          "NETAMOUNT" => number_format(round($res['NETAMOUNT'])),
-          "nettotal" => number_format(round($res['NETAMOUNT'])),
+          "NETAMOUNT" => round($res['NETAMOUNT'],2),
+          "nettotal" => round($res['NETAMOUNT'],2),
           "nettotal2" => $res['NETAMOUNT']
           
         );
@@ -139,7 +129,7 @@ AND (ECPT.LANGUAGEID ='en-us') ".$where." ";
     "dbcustomername" => $dbcustomername,
     "tax" => $tax,
     "dbfield1" => $dbfield1,
-    "totalamount" =>  $totalamount,
+    "totalamount" =>  round($totalamount),
     "data"    => $mysql_data
   );
 // Convert PHP array to JSON array

@@ -1,0 +1,5 @@
+whenever adding new site,
+always add 3 fields of :
+
+in table RETAILTRANSACTIONTABLE
+of that database
